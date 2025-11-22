@@ -1,0 +1,47 @@
+---
+import { BackgroundGradient } from "@/components/ui/background-gradient";
+---
+
+<div class="flex flex-col items-center justify-center gap-4 p-8 w-full">
+  <BackgroundGradient>
+    <div class="card">
+      <h3 class="card-title">Título de la tarjeta</h3>
+      <p class="card-text">
+        Esta es una tarjeta sencilla que puedes envolver con el
+        BackgroundGradient.
+      </p>
+      <button class="card-button">Acción</button>
+    </div>
+  </BackgroundGradient>
+</div>
+
+<style>
+  .card {
+    background: white;
+    padding: 20px;
+    border-radius: 16px;
+    text-align: center;
+    max-width: 280px;
+    margin: 0 auto;
+  }
+
+  .card-title {
+    margin: 0 0 10px;
+    font-size: 20px;
+  }
+
+  .card-text {
+    margin: 0 0 20px;
+    color: #444;
+    font-size: 14px;
+  }
+
+  .card-button {
+    padding: 10px 16px;
+    background: #3b82f6;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+</style>
