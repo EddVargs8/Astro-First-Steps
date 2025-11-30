@@ -1,16 +1,30 @@
 ---
 import { BackgroundGradient } from "@/components/ui/background-gradient";
+interface Props {
+  titulo: string;
+  texto?: string;
+  boton?: string;
+}
+
+const { titulo, texto, boton } = Astro.props;
 ---
 
 <div class="flex flex-col items-center justify-center gap-4 p-8 w-full">
-  <BackgroundGradient>
-    <div class="card">
-      <h3 class="card-title">Título de la tarjeta</h3>
-      <p class="card-text">
-        Esta es una tarjeta sencilla que puedes envolver con el
-        BackgroundGradient.
-      </p>
-      <button class="card-button">Acción</button>
+  <BackgroundGradient client:load>
+    <div class="card grid grid-cols-2 gap-4">
+      <div>
+        <!-- Left Column -->
+        <slot name="left-title" />
+        <slot name="left-text" />
+        <slot name="left-image" />
+      </div>
+
+      <div>
+        <!-- Right Column -->
+        <slot name="right-title" />
+        <slot name="right-text" />
+        <slot name="right-image" />
+      </div>
     </div>
   </BackgroundGradient>
 </div>

@@ -1,0 +1,20 @@
+---
+import { actions } from "astro:actions";
+// Leer resultado del POST
+const result = Astro.getActionResult(actions.ping);
+---
+
+<h1>Test Action</h1>
+
+{
+  result && (
+    <p>
+      <strong>Respuesta:</strong> {result.data?.message}
+    </p>
+  )
+}
+
+<form method="POST" action={actions.ping}>
+  <input type="text" name="name" placeholder="Tu nombre" required />
+  <button type="submit">Enviar</button>
+</form>
