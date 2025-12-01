@@ -11,6 +11,7 @@ import {
 } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
+import { actions } from "astro:actions";
 ---
 
 <div class="min-h-screen flex items-center justify-center p-4 bg-[#01204c]">
@@ -25,7 +26,7 @@ import { Label } from "@/components/ui/label";
       </CardAction>
     </CardHeader>
     <CardContent>
-      <form>
+      <form method="POST" action={actions.login}>
         <div class="flex flex-col gap-6">
           <div class="grid gap-2">
             <Label htmlFor="email">Email</Label>
