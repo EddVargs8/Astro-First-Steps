@@ -1,21 +1,18 @@
-
-
-export default function Hero({app, code}) {
+export default function Hero({ app, code }) {
   return (
-    <div className="bg-gray-900 py-24 sm:py-32">
-      <div className="mx-auto max-w-2xl px-6 lg:max-w-7xl lg:px-8">
-        <h2 className="text-center text-base/7 font-semibold text-indigo-400">Deploy faster</h2>
-        <p className="mx-auto mt-2 max-w-lg text-center text-4xl font-semibold tracking-tight text-balance text-white sm:text-5xl">
-          Everything you need to deploy your {app}
+    <div className="bg-gray-900 py-24 sm:py-14 rounded-2xl">
+      <div className="mx-auto max-w-2xl lg:max-w-7xl lg:px-8">
+        <p className="mx-auto max-w-lg text-center text-4xl font-semibold tracking-tight text-balance text-white sm:text-5xl">
+          Cloudzters - All in one Automated Solution.
         </p>
         <div className="mt-10 grid gap-4 sm:mt-16 lg:grid-cols-3 lg:grid-rows-2">
           <div className="relative lg:row-span-2">
             <div className="absolute inset-px rounded-lg bg-gray-800 lg:rounded-l-4xl" />
             <div className="relative flex h-full flex-col overflow-hidden rounded-[calc(var(--radius-lg)+1px)] lg:rounded-l-[calc(2rem+1px)]">
               <div className="px-8 pt-8 pb-3 sm:px-10 sm:pt-10 sm:pb-0">
-                <p className="mt-2 text-lg font-medium tracking-tight text-white max-lg:text-center">Mobile friendly</p>
-                <p className="mt-2 max-w-lg text-sm/6 text-gray-400 max-lg:text-center">
-                  Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo.
+                <p className="mt-2 text-lg font-medium tracking-tight text-white max-lg:text-center">
+                  One place for your Customer Service, Marketing, Sales and so
+                  much more.
                 </p>
               </div>
               <div className="@container relative min-h-120 w-full grow max-lg:mx-auto max-lg:max-w-sm">
@@ -34,9 +31,8 @@ export default function Hero({app, code}) {
             <div className="absolute inset-px rounded-lg bg-gray-800 max-lg:rounded-t-4xl" />
             <div className="relative flex h-full flex-col overflow-hidden rounded-[calc(var(--radius-lg)+1px)] max-lg:rounded-t-[calc(2rem+1px)]">
               <div className="px-8 pt-8 sm:px-10 sm:pt-10">
-                <p className="mt-2 text-lg font-medium tracking-tight text-white max-lg:text-center">Performance</p>
-                <p className="mt-2 max-w-lg text-sm/6 text-gray-400 max-lg:text-center">
-                  Lorem ipsum, dolor sit amet consectetur adipisicing elit maiores impedit.
+                <p className="mt-2 text-lg font-medium tracking-tight text-white max-lg:text-center">
+                  Get all you need to run your bussiness in a single place{" "}
                 </p>
               </div>
               <div className="flex flex-1 items-center justify-center px-8 max-lg:pt-10 max-lg:pb-12 sm:px-10 lg:pb-2">
@@ -53,9 +49,8 @@ export default function Hero({app, code}) {
             <div className="absolute inset-px rounded-lg bg-gray-800" />
             <div className="relative flex h-full flex-col overflow-hidden rounded-[calc(var(--radius-lg)+1px)]">
               <div className="px-8 pt-8 sm:px-10 sm:pt-10">
-                <p className="mt-2 text-lg font-medium tracking-tight text-white max-lg:text-center">Security</p>
-                <p className="mt-2 max-w-lg text-sm/6 text-gray-400 max-lg:text-center">
-                  Morbi viverra dui mi arcu sed. Tellus semper adipiscing suspendisse semper morbi.
+                <p className="mt-2 text-lg font-medium tracking-tight text-white max-lg:text-center">
+                  Smart Automation That Works Like Clockwork{" "}
                 </p>
               </div>
               <div className="@container flex flex-1 items-center max-lg:py-6 lg:pb-2">
@@ -72,9 +67,9 @@ export default function Hero({app, code}) {
             <div className="absolute inset-px rounded-lg bg-gray-800 max-lg:rounded-b-4xl lg:rounded-r-4xl" />
             <div className="relative flex h-full flex-col overflow-hidden rounded-[calc(var(--radius-lg)+1px)] max-lg:rounded-b-[calc(2rem+1px)] lg:rounded-r-[calc(2rem+1px)]">
               <div className="px-8 pt-8 pb-3 sm:px-10 sm:pt-10 sm:pb-0">
-                <p className="mt-2 text-lg font-medium tracking-tight text-white max-lg:text-center">Powerful APIs</p>
-                <p className="mt-2 max-w-lg text-sm/6 text-gray-400 max-lg:text-center">
-                  Sit quis amet rutrum tellus ullamcorper ultricies libero dolor eget sem sodales gravida.
+                <p className="mt-2 text-lg font-medium tracking-tight text-white max-lg:text-center">
+                  Create Web Pages without HTML, use the drag and drop
+                  integrated site builder
                 </p>
               </div>
               <div className="relative min-h-120 w-full grow">
@@ -82,12 +77,16 @@ export default function Hero({app, code}) {
                   <div className="flex bg-gray-900 outline outline-white/5">
                     <div className="-mb-px flex text-sm/6 font-medium text-gray-400">
                       <div className="border-r border-b border-r-white/10 border-b-white/20 bg-white/5 px-4 py-2 text-white">
-                        NotificationSetting.jsx
+                        Index.cldztrs
                       </div>
-                      <div className="border-r border-gray-600/10 px-4 py-2">App.jsx</div>
+                      <div className="border-r border-gray-600/10 px-4 py-2">
+                        App.cldzters
+                      </div>
                     </div>
                   </div>
-                  <div className="px-6 pt-6 pb-14 text-white/90">{code}</div>
+                  <div className="px-6 pt-6 pb-14 text-white/90">
+                    console.log("Hola desde Cloudzters")
+                  </div>
                 </div>
               </div>
             </div>
@@ -96,6 +95,5 @@ export default function Hero({app, code}) {
         </div>
       </div>
     </div>
-  )
+  );
 }
-

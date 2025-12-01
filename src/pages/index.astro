@@ -4,19 +4,13 @@ import Hero from "../components/hero.jsx";
 import Card from "../components/card.astro";
 import jordans from "../assets/jordans.webp";
 import Login from "../components/login.astro";
+import { BackgroundGradient } from "@/components/ui/background-gradient";
 ---
 
-<Layout title="Playground">
-  <Hero app="Astro" code="console.log('Hello, Astro!');" />
-  <Card titulo="Hola" texto="Texto de la tarjeta" boton="Aceptar">
-    <p slot="left-title">Título Izquierdo</p>
-    <img slot="right-image" src={jordans.src} alt="Jordan Shoes" />
-    <p slot="left-text">Estas son unas zapatillas Jordan muy chulas.</p>
-  </Card>
-  <Card titulo="Hola" texto="Texto de la tarjeta" boton="Aceptar">
-    <p slot="right-title">Título Izquierdo</p>
-    <img slot="left-image" src={jordans.src} alt="Jordan Shoes" />
-    <p slot="right-text">Estas son unas zapatillas Jordan muy chulas.</p>
-  </Card>
-  <Login />
+<Layout title="Home">
+  <div class="bg-gray-900">
+    <BackgroundGradient>
+      <Hero app="Astro" code="console.log('Hello, Astro!');" />
+    </BackgroundGradient>
+  </div>
 </Layout>

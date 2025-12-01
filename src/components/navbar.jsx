@@ -1,5 +1,5 @@
-import * as React from "react"
-import { CircleCheckIcon, CircleHelpIcon, CircleIcon } from "lucide-react"
+import * as React from "react";
+import { CircleCheckIcon, CircleHelpIcon, CircleIcon } from "lucide-react";
 
 import {
   NavigationMenu,
@@ -9,7 +9,7 @@ import {
   NavigationMenuList,
   NavigationMenuTrigger,
   navigationMenuTriggerStyle,
-} from "@/components/ui/navigation-menu"
+} from "@/components/ui/navigation-menu";
 
 const components = [
   {
@@ -47,15 +47,13 @@ const components = [
     description:
       "A popup that displays information related to an element when the element receives keyboard focus or the mouse hovers over it.",
   },
-]
+];
 
 export default function NavigationMenuDemo() {
-
   return (
-    
     <NavigationMenu>
       <NavigationMenuList className="flex-wrap">
-        <NavigationMenuItem >
+        <NavigationMenuItem>
           <NavigationMenuTrigger>Home</NavigationMenuTrigger>
           <NavigationMenuContent>
             <ul className="grid gap-2 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
@@ -66,7 +64,7 @@ export default function NavigationMenuDemo() {
                     href="/"
                   >
                     <div className="mb-2 text-lg font-medium sm:mt-4">
-                      shadcn/ui
+                      Go Home
                     </div>
                     <p className="text-muted-foreground text-sm leading-tight">
                       Beautifully designed components built with Tailwind CSS.
@@ -109,7 +107,7 @@ export default function NavigationMenuDemo() {
 
         <NavigationMenuItem>
           <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
-            <a href="/docs">Docs</a>
+            <a href="/login">Login</a>
           </NavigationMenuLink>
         </NavigationMenuItem>
 
@@ -199,8 +197,7 @@ export default function NavigationMenuDemo() {
         </NavigationMenuItem>
       </NavigationMenuList>
     </NavigationMenu>
-
-  )
+  );
 }
 
 function ListItem({ title, children, href, ...props }) {
@@ -215,5 +212,5 @@ function ListItem({ title, children, href, ...props }) {
         </a>
       </NavigationMenuLink>
     </li>
-  )
+  );
 }
