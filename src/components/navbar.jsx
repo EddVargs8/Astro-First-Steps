@@ -117,10 +117,10 @@ export default function NavigationMenuDemo() {
             <ul className="grid w-[300px] gap-4">
               <li>
                 <NavigationMenuLink asChild>
-                  <a href="#">
-                    <div className="font-medium">Components</div>
+                  <a href="/contact">
+                    <div className="font-medium">Contact</div>
                     <div className="text-muted-foreground">
-                      Browse all components in the library.
+                      Get in touch with us.
                     </div>
                   </a>
                 </NavigationMenuLink>

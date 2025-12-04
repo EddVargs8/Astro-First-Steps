@@ -26,4 +26,15 @@ export const server = {
       }
     },
   }),
+  contactForm: defineAction({
+    accept: "form",
+    input: z.object({
+      email: z.string().email(),
+      message: z.string().min(10),
+    }),
+    handler: async (input) => {
+      const {email, message} = input;
+      console.log("Contact form submitted:", message, "from", email);
+    },
+  }),
 };

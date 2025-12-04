@@ -1,0 +1,15 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { BackgroundGradient } from "@/components/ui/background-gradient";
+import Form from "@/components/contact-form.astro";
+
+export const prerender = false;
+---
+
+<Layout title="Contact Us">
+  <div class="bg-gray-900">
+    <BackgroundGradient>
+      <Form />
+    </BackgroundGradient>
+  </div>
+</Layout>

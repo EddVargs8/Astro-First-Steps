@@ -1,0 +1,72 @@
+---
+import { Button } from "@/components/ui/button";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import {
+  Field,
+  FieldDescription,
+  FieldError,
+  FieldGroup,
+  FieldLabel,
+} from "@/components/ui/field";
+import { Input } from "@/components/ui/input";
+import {
+  InputGroup,
+  InputGroupAddon,
+  InputGroupText,
+  InputGroupTextarea,
+} from "@/components/ui/input-group";
+import { actions } from "astro:actions";
+---
+
+<div class="min-h-screen flex items-center justify-center p-4 bg-[#01204c]">
+  <Card className="w-full sm:max-w-md">
+    <CardHeader>
+      <CardTitle>Contact Us</CardTitle>
+      <CardDescription>
+        Leave your info and message, and we'll get back to you shortly.
+      </CardDescription>
+    </CardHeader>
+    <CardContent>
+      <form id="form-rhf-demo" action={actions.contactForm} method="post">
+        <FieldGroup>
+          <Field>
+            <FieldLabel htmlFor="form-rhf-demo-title">
+              Email Address:
+            </FieldLabel>
+            <Input
+              id="form-rhf-demo-title"
+              name="email"
+              placeholder="user@example.com"
+              autoComplete="off"
+            />
+          </Field>
+
+          <Field>
+            <FieldLabel htmlFor="form-rhf-demo-description">
+              Message for us:
+            </FieldLabel>
+            <InputGroup>
+              <InputGroupTextarea
+                id="form-rhf-demo-description"
+                placeholder="I'm interested in your product because..."
+                rows={6}
+                className="min-h-24 resize-none"
+                name="message"
+              />
+            </InputGroup>
+          </Field>
+        </FieldGroup>
+        <Button className="my-3" type="submit" form="form-rhf-demo">
+          Submit
+        </Button>
+      </form>
+    </CardContent>
+  </Card>
+</div>
