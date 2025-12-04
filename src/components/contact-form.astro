@@ -23,6 +23,8 @@ import {
   InputGroupTextarea,
 } from "@/components/ui/input-group";
 import { actions } from "astro:actions";
+const result = Astro.getActionResult(actions.contactForm);
+console.log(result);
 ---
 
 <div class="min-h-screen flex items-center justify-center p-4 bg-[#01204c]">
