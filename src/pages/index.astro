@@ -1,16 +1,12 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Hero from "../components/hero.jsx";
-import Card from "../components/card.astro";
-import jordans from "../assets/jordans.webp";
-import Login from "../components/login.astro";
-import { BackgroundGradient } from "@/components/ui/background-gradient";
+import Hero from "../components/hero.astro";
 ---
 
 <Layout title="Home">
-  <div class="bg-gray-900">
-    <BackgroundGradient>
-      <Hero app="Astro" code="console.log('Hello, Astro!');" />
-    </BackgroundGradient>
-  </div>
+  <Hero>
+    <p class="text-center text-6xl text-white" transition:name="--trans--">
+      Explore the features of Astro with these example cards:
+    </p>
+  </Hero>
 </Layout>

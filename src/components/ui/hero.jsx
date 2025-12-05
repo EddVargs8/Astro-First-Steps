@@ -1,14 +1,12 @@
-export default function Hero({ app, code }) {
+import { BackgroundGradient } from "./background-gradient"; 
+
+export default function Hero() {
   return (
-    <div className="bg-gray-900 py-24 sm:py-14 rounded-2xl">
-      <div className="mx-auto max-w-2xl lg:max-w-7xl lg:px-8">
-        <p className="mx-auto max-w-lg text-center text-4xl font-semibold tracking-tight text-balance text-white sm:text-5xl">
-          Cloudzters - All in one Automated Solution.
-        </p>
+      <div className="mx-auto max-w-2xl lg:max-w-7xl lg:px-8"> 
         <div className="mt-10 grid gap-4 sm:mt-16 lg:grid-cols-3 lg:grid-rows-2">
-          <div className="relative lg:row-span-2">
-            <div className="absolute inset-px rounded-lg bg-gray-800 lg:rounded-l-4xl" />
-            <div className="relative flex h-full flex-col overflow-hidden rounded-[calc(var(--radius-lg)+1px)] lg:rounded-l-[calc(2rem+1px)]">
+          
+          <BackgroundGradient containerClassName="lg:row-span-2">
+            <div className="relative flex h-full flex-col overflow-hidden bg-gray-800 rounded-[22px]">
               <div className="px-8 pt-8 pb-3 sm:px-10 sm:pt-10 sm:pb-0">
                 <p className="mt-2 text-lg font-medium tracking-tight text-white max-lg:text-center">
                   One place for your Customer Service, Marketing, Sales and so
@@ -25,16 +23,16 @@ export default function Hero({ app, code }) {
                 </div>
               </div>
             </div>
-            <div className="pointer-events-none absolute inset-px rounded-lg shadow-sm outline outline-white/15 lg:rounded-l-4xl" />
-          </div>
-          <div className="relative max-lg:row-start-1">
-            <div className="absolute inset-px rounded-lg bg-gray-800 max-lg:rounded-t-4xl" />
-            <div className="relative flex h-full flex-col overflow-hidden rounded-[calc(var(--radius-lg)+1px)] max-lg:rounded-t-[calc(2rem+1px)]">
+          </BackgroundGradient>
+
+          <BackgroundGradient containerClassName="max-lg:row-start-1">
+            <div className="relative flex h-full flex-col overflow-hidden bg-gray-800 rounded-[22px]">
               <div className="px-8 pt-8 sm:px-10 sm:pt-10">
                 <p className="mt-2 text-lg font-medium tracking-tight text-white max-lg:text-center">
-                  Get all you need to run your bussiness in a single place{" "}
+                  Get all you need to run your bussiness in a single place
                 </p>
               </div>
+
               <div className="flex flex-1 items-center justify-center px-8 max-lg:pt-10 max-lg:pb-12 sm:px-10 lg:pb-2">
                 <img
                   alt=""
@@ -43,14 +41,13 @@ export default function Hero({ app, code }) {
                 />
               </div>
             </div>
-            <div className="pointer-events-none absolute inset-px rounded-lg shadow-sm outline outline-white/15 max-lg:rounded-t-4xl" />
-          </div>
-          <div className="relative max-lg:row-start-3 lg:col-start-2 lg:row-start-2">
-            <div className="absolute inset-px rounded-lg bg-gray-800" />
-            <div className="relative flex h-full flex-col overflow-hidden rounded-[calc(var(--radius-lg)+1px)]">
+          </BackgroundGradient>
+
+          <BackgroundGradient containerClassName="max-lg:row-start-3 lg:col-start-2 lg:row-start-2">
+            <div className="relative flex h-full flex-col overflow-hidden bg-gray-800 rounded-[22px]">
               <div className="px-8 pt-8 sm:px-10 sm:pt-10">
                 <p className="mt-2 text-lg font-medium tracking-tight text-white max-lg:text-center">
-                  Smart Automation That Works Like Clockwork{" "}
+                  Smart Automation That Works Like Clockwork
                 </p>
               </div>
               <div className="@container flex flex-1 items-center max-lg:py-6 lg:pb-2">
@@ -61,11 +58,9 @@ export default function Hero({ app, code }) {
                 />
               </div>
             </div>
-            <div className="pointer-events-none absolute inset-px rounded-lg shadow-sm outline outline-white/15" />
-          </div>
-          <div className="relative lg:row-span-2">
-            <div className="absolute inset-px rounded-lg bg-gray-800 max-lg:rounded-b-4xl lg:rounded-r-4xl" />
-            <div className="relative flex h-full flex-col overflow-hidden rounded-[calc(var(--radius-lg)+1px)] max-lg:rounded-b-[calc(2rem+1px)] lg:rounded-r-[calc(2rem+1px)]">
+          </BackgroundGradient>
+          <BackgroundGradient containerClassName="lg:row-span-2">
+            <div className="relative flex h-full flex-col overflow-hidden bg-gray-800 rounded-[22px]">
               <div className="px-8 pt-8 pb-3 sm:px-10 sm:pt-10 sm:pb-0">
                 <p className="mt-2 text-lg font-medium tracking-tight text-white max-lg:text-center">
                   Create Web Pages without HTML, use the drag and drop
@@ -90,10 +85,9 @@ export default function Hero({ app, code }) {
                 </div>
               </div>
             </div>
-            <div className="pointer-events-none absolute inset-px rounded-lg shadow-sm outline outline-white/15 max-lg:rounded-b-4xl lg:rounded-r-4xl" />
-          </div>
+          </BackgroundGradient>
+
         </div>
       </div>
-    </div>
   );
 }

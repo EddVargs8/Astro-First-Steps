@@ -21,8 +21,15 @@ export const BackgroundGradient = ({
       backgroundPosition: ["0, 50%", "100% 50%", "0 50%"],
     },
   };
+
+  
+  const gradientLayer1 = "bg-[radial-gradient(circle_farthest-side_at_0_100%,#1C542D,#1C542D),radial-gradient(circle_farthest-side_at_100%_0,#1C542D,#1C542D),radial-gradient(circle_farthest-side_at_100%_100%,#1C542D,#1C542D),radial-gradient(circle_farthest-side_at_0_0,#1C542D,#1C542D)]";
+  
+  const gradientLayer2 = "bg-[radial-gradient(circle_farthest-side_at_0_100%,#1C542D,#34d399),radial-gradient(circle_farthest-side_at_100%_0,#1C542D,#34d399),radial-gradient(circle_farthest-side_at_100%_100%,#1C542D,#34d399),radial-gradient(circle_farthest-side_at_0_0,#1C542D,#34d399)]";
+
   return (
-    <div className={cn("relative p-1 group", containerClassName)}>
+    <div className={cn("relative p-[4px] group", containerClassName)}>
+      {/* Capa de Sombra/Glow (Blur) */}
       <motion.div
         variants={animate ? variants : undefined}
         initial={animate ? "initial" : undefined}
@@ -40,10 +47,11 @@ export const BackgroundGradient = ({
           backgroundSize: animate ? "400% 400%" : undefined,
         }}
         className={cn(
-          "absolute inset-0 rounded-3xl z-1 opacity-60 group-hover:opacity-100 blur-xl  transition duration-500 will-change-transform",
-          "bg-[radial-gradient(circle_farthest-side_at_0_100%,#01204c,#01204c),radial-gradient(circle_farthest-side_at_100%_0,#01204c,#01204c),radial-gradient(circle_farthest-side_at_100%_100%,#01204c,#01204c),radial-gradient(circle_farthest-side_at_0_0,#01204c,#01204c)]",
+          "absolute inset-0 rounded-3xl z-[1] opacity-60 group-hover:opacity-100 blur-xl transition duration-500 will-change-transform",
+          gradientLayer1 
         )}
       />
+      {/* Capa del Borde Visible */}
       <motion.div
         variants={animate ? variants : undefined}
         initial={animate ? "initial" : undefined}
@@ -61,8 +69,8 @@ export const BackgroundGradient = ({
           backgroundSize: animate ? "400% 400%" : undefined,
         }}
         className={cn(
-          "absolute inset-0 rounded-3xl z-1 will-change-transform",
-          "bg-[radial-gradient(circle_farthest-side_at_0_100%,#01204c,#013a8c),radial-gradient(circle_farthest-side_at_100%_0,#01204c,#013a8c),radial-gradient(circle_farthest-side_at_100%_100%,#01204c,#013a8c),radial-gradient(circle_farthest-side_at_0_0,#01204c,#013a8c)]",
+          "absolute inset-0 rounded-3xl z-[1] will-change-transform",
+          gradientLayer2 
         )}
       />
 
